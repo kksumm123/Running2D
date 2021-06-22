@@ -1,0 +1,1083 @@
+fileFormatVersion: 2
+guid: 8c0b474e593905d42ab8f3d38572fbaa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: TX Tileset Ground Darken TL
+  - first:
+      213: 21300002
+    second: TX Tileset Ground Darken T
+  - first:
+      213: 21300004
+    second: TX Tileset Ground Darken TR
+  - first:
+      213: 21300006
+    second: TX Tileset Ground Darken BR
+  - first:
+      213: 21300008
+    second: TX Tileset Ground Darken B
+  - first:
+      213: 21300010
+    second: TX Tileset Ground Darken BL
+  - first:
+      213: 21300012
+    second: TX Tileset Ground Darken M
+  - first:
+      213: 21300014
+    second: TX Tileset Ground Darken R
+  - first:
+      213: 21300016
+    second: TX Tileset Ground Darken L
+  - first:
+      213: 21300018
+    second: TX Tileset Ground Darken Row L
+  - first:
+      213: 21300020
+    second: TX Tileset Ground Darken Row M
+  - first:
+      213: 21300022
+    second: TX Tileset Ground Darken Row R
+  - first:
+      213: 21300024
+    second: TX Tileset Ground Darken S
+  - first:
+      213: 21300026
+    second: TX Tileset Ground Darken Col T
+  - first:
+      213: 21300028
+    second: TX Tileset Ground Darken Col M
+  - first:
+      213: 21300030
+    second: TX Tileset Ground_2
+  - first:
+      213: 21300032
+    second: TX Tileset Ground Darken Col B
+  - first:
+      213: 21300034
+    second: TX Tileset Ground Darken C T
+  - first:
+      213: 21300036
+    second: TX Tileset Ground Darken C L
+  - first:
+      213: 21300038
+    second: TX Tileset Ground Darken C R
+  - first:
+      213: 21300040
+    second: TX Tileset Ground Darken C B
+  - first:
+      213: 21300042
+    second: TX Tileset Ground Darken C BL
+  - first:
+      213: 21300044
+    second: TX Tileset Ground Darken C BR
+  - first:
+      213: 21300046
+    second: TX Tileset Ground Darken C TR
+  - first:
+      213: 21300048
+    second: TX Tileset Ground Darken C TL
+  - first:
+      213: 21300050
+    second: TX Tileset Ground Darken Slope X1 L T
+  - first:
+      213: 21300052
+    second: TX Tileset Ground Darken Slope X1 R T
+  - first:
+      213: 21300054
+    second: TX Tileset Ground Darken Slope X2 L 1
+  - first:
+      213: 21300056
+    second: TX Tileset Ground Darken Slope X2 R 1
+  - first:
+      213: 21300058
+    second: TX Tileset Ground Darken Slope X1 L B
+  - first:
+      213: 21300060
+    second: TX Tileset Ground Darken Slope X1 R B
+  - first:
+      213: 21300062
+    second: TX Tileset Ground Darken Slope X2 L 2
+  - first:
+      213: 21300064
+    second: TX Tileset Ground Darken Slope X2 L 3
+  - first:
+      213: 21300066
+    second: TX Tileset Ground Darken Slope X2 L 4
+  - first:
+      213: 21300068
+    second: TX Tileset Ground Darken Slope X2 R 2
+  - first:
+      213: 21300070
+    second: TX Tileset Ground Darken Slope X2 R 3
+  - first:
+      213: 21300072
+    second: TX Tileset Ground Darken Slope X2 R 4
+  - first:
+      213: 6432295047150126866
+    second: TX Tileset Ground Darken 1_0
+  - first:
+      213: -2906183444397822104
+    second: TX Tileset Ground Darken 1_1
+  - first:
+      213: -1690900997715167946
+    second: TX Tileset Ground Darken 1_2
+  - first:
+      213: -8864921529308799163
+    second: TX Tileset Ground Darken 1_3
+  - first:
+      213: 5483982805534832131
+    second: TX Tileset Ground Darken 1_4
+  - first:
+      213: 8337290178180353449
+    second: TX Tileset Ground Darken 1_5
+  - first:
+      213: -8393921596458480918
+    second: TX Tileset Ground Darken 1_6
+  - first:
+      213: -3713122664568995918
+    second: TX Tileset Ground Darken 1_7
+  - first:
+      213: 6152245532023783177
+    second: TX Tileset Ground Darken 1_8
+  - first:
+      213: 3189182045528511801
+    second: TX Tileset Ground Darken 1_9
+  - first:
+      213: 5062809085580220699
+    second: TX Tileset Ground Darken 1_10
+  - first:
+      213: -2709838430783143156
+    second: TX Tileset Ground Darken 1_11
+  - first:
+      213: 4746390848564487409
+    second: TX Tileset Ground Darken 1_12
+  - first:
+      213: -237667914622388283
+    second: TX Tileset Ground Darken 1_13
+  - first:
+      213: -1874647098347400804
+    second: TX Tileset Ground Darken 1_14
+  - first:
+      213: 1416043389965288216
+    second: TX Tileset Ground Darken 1_15
+  - first:
+      213: -3717244886162892013
+    second: TX Tileset Ground Darken 1_16
+  - first:
+      213: 8689167746377264047
+    second: TX Tileset Ground Darken 1_17
+  - first:
+      213: -1494913872618198820
+    second: TX Tileset Ground Darken 1_18
+  - first:
+      213: 5528575771556885123
+    second: TX Tileset Ground Darken 1_19
+  - first:
+      213: -2153169060649437685
+    second: TX Tileset Ground Darken 1_20
+  - first:
+      213: 6802302670771077672
+    second: TX Tileset Ground Darken 1_21
+  - first:
+      213: -5176985530265590862
+    second: TX Tileset Ground Darken 1_22
+  - first:
+      213: -4542456729450508666
+    second: TX Tileset Ground Darken 1_23
+  - first:
+      213: -3950236511048559876
+    second: TX Tileset Ground Darken 1_24
+  - first:
+      213: 3882598041187254615
+    second: TX Tileset Ground Darken 1_25
+  - first:
+      213: 2460656642625694260
+    second: TX Tileset Ground Darken 1_26
+  - first:
+      213: -8578125295620980752
+    second: TX Tileset Ground Darken 1_27
+  - first:
+      213: 5069469978225253003
+    second: TX Tileset Ground Darken 1_28
+  - first:
+      213: -5698197928321629448
+    second: TX Tileset Ground Darken 1_29
+  - first:
+      213: -2185305574781786840
+    second: TX Tileset Ground Darken 1_30
+  - first:
+      213: 5061106520782661803
+    second: TX Tileset Ground Darken 1_31
+  - first:
+      213: -6689405289092439855
+    second: TX Tileset Ground Darken 1_32
+  - first:
+      213: -8778590927270117176
+    second: TX Tileset Ground Darken 1_33
+  - first:
+      213: -3449434147237460400
+    second: TX Tileset Ground Darken 1_34
+  - first:
+      213: 3010512853083511464
+    second: TX Tileset Ground Darken 1_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21743eff34a144950800000000000000
+      internalID: 6432295047150126866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86feb801e892ba7d0800000000000000
+      internalID: -2906183444397822104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63575d85086b888e0800000000000000
+      internalID: -1690900997715167946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f16d366d879f480800000000000000
+      internalID: -8864921529308799163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306f0466e450b1c40800000000000000
+      internalID: 5483982805534832131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad0bc38e3104b370800000000000000
+      internalID: 8337290178180353449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeacc9ae7ccc28b80800000000000000
+      internalID: -8393921596458480918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bfb9ea0c96587cc0800000000000000
+      internalID: -3713122664568995918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ff24327ba216550800000000000000
+      internalID: 6152245532023783177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935d7c36c20424c20800000000000000
+      internalID: 3189182045528511801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1911a71a06b24640800000000000000
+      internalID: 5062809085580220699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c030876fd48b46ad0800000000000000
+      internalID: -2709838430783143156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4e9dd44519ed140800000000000000
+      internalID: 4746390848564487409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7bc667a42a3bcf0800000000000000
+      internalID: -237667914622388283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9159c7756aebf5e0800000000000000
+      internalID: -1874647098347400804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813cb6de5fbc6a310800000000000000
+      internalID: 1416043389965288216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_16
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b9f198871b96cc0800000000000000
+      internalID: -3717244886162892013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab29943700269870800000000000000
+      internalID: 8689167746377264047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8e9c4d0cff04be0800000000000000
+      internalID: -1494913872618198820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382ba716f5279bc40800000000000000
+      internalID: 5528575771556885123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06f0a6b5286e12e0800000000000000
+      internalID: -2153169060649437685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822400a2d32a66e50800000000000000
+      internalID: 6802302670771077672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_22
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3ae2dc617a728b0800000000000000
+      internalID: -5176985530265590862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e0589eba3f5f0c0800000000000000
+      internalID: -4542456729450508666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf21c2c82d0fd29c0800000000000000
+      internalID: -3950236511048559876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751089af852c1e530800000000000000
+      internalID: 3882598041187254615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ae8e9ed22062220800000000000000
+      internalID: 2460656642625694260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_27
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fff7b31e7064f880800000000000000
+      internalID: -8578125295620980752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a9f9306106a5640800000000000000
+      internalID: 5069469978225253003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2c58eac2febe0b0800000000000000
+      internalID: -5698197928321629448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_30
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8256371782c3ca1e0800000000000000
+      internalID: -2185305574781786840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8e9a5d099ac3640800000000000000
+      internalID: 5061106520782661803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_32
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0a601e4557a23a0800000000000000
+      internalID: -6689405289092439855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c00997001e2c2680800000000000000
+      internalID: -8778590927270117176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_34
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0560fc14be52120d0800000000000000
+      internalID: -3449434147237460400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Tileset Ground Darken 1_35
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa5acf4d7d77c920800000000000000
+      internalID: 3010512853083511464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ea4b85c07eaa3d14b9704023beb1813a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
