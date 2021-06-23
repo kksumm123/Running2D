@@ -5,15 +5,25 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Animator animator;
-
-    [SerializeField] float speed = 20f;
+    Rigidbody2D rigid;
+    [SerializeField] float speed;
+    [SerializeField] Vector2 jumpForce = new Vector2(0, 1000f);
+    [SerializeField] float gravityScale = 7f;
     void Start()
     {
+        speed = RunGameManager.instance.speed;
         animator = GetComponentInChildren<Animator>();
+        rigid = GetComponent<Rigidbody2D>();
+        rigid.gravityScale = gravityScale;
     }
 
     void Update()
     {
         transform.Translate(speed * Time.deltaTime, 0, 0);
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            rigid.AddForce(jumpForce);
+        }
     }
 }
