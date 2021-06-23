@@ -96,6 +96,12 @@ MonoBehaviour:
   speed: 0
   jumpForce: {x: 0, y: 1000}
   gravityScale: 7
+  valueMidAirVeloY: 10
+  rayStart: {fileID: 0}
+  rayCheckDistance: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &774898445313942432
 GameObject:
   m_ObjectHideFlags: 0

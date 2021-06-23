@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,31 +18,66 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         rigid.gravityScale = gravityScale;
         animator.Play("Run");
+        rayStart = transform;
+        groundLayer = 1 << LayerMask.NameToLayer("Ground");
     }
 
     string animationName;
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        Move();
+        Jump();
+        Animation();
+    }
 
+
+    void Move()
+    {
+        transform.Translate(speed * Time.deltaTime, 0, 0);
+    }
+    void Jump()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
             rigid.AddForce(jumpForce);
-
+    }
+    IEnumerator CoFn()
+    {
+        yield return null;
+    }
+    void Animation()
+    {
+        var coHandle = StartCoroutine(CoFn());
+        StopCoroutine(coHandle);
+        StopAllCoroutines();
         // 애니메이션
-
-        // 0보다 작으면 추락
-        // -10 ~ 10 = MidAir
-        // 0보다 크면 상승
-        float veloY = rigid.velocity.y;
-        if (Mathf.Abs(veloY) < valueMidAirVeloY) // MidAir
-            animationName = "MidAir";
-        else if (veloY > 0)
-            animationName = "JumpUp";
-        else if (veloY == 0)
+        if (ChkGround())
+        {
             animationName = "Run";
-        else
-            animationName = "JumpFall";
+        }
+        else 
+        {
+            // 0보다 작으면 추락
+            // -10 ~ 10 = MidAir
+            // 0보다 크면 상승
+            float veloY = rigid.velocity.y;
+            if (Mathf.Abs(veloY) < valueMidAirVeloY) // MidAir
+                animationName = "MidAir";
+            else if (veloY > 0)
+                animationName = "JumpUp";
+            else
+                animationName = "JumpFall";
+        }
+        animator.Play(animationName);
+    }
 
-        animator.Play(animationName); 
+    [SerializeField] Transform rayStart;
+    [SerializeField] float rayCheckDistance = 0.1f;
+    [SerializeField] LayerMask groundLayer;
+    bool ChkGround()
+    {
+        Debug.Assert(groundLayer != 0, "레이어 지정안됨");
+        var hit = Physics2D.Raycast(
+            rayStart.position, Vector2.down, rayCheckDistance, groundLayer);
+        return hit.transform;
     }
 }
