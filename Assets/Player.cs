@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
         animator.Play("Run");
     }
 
+    string animationName;
     void Update()
     {
         transform.Translate(speed * Time.deltaTime, 0, 0);
@@ -27,17 +28,20 @@ public class Player : MonoBehaviour
             rigid.AddForce(jumpForce);
 
         // 애니메이션
+
         // 0보다 작으면 추락
         // -10 ~ 10 = MidAir
         // 0보다 크면 상승
         float veloY = rigid.velocity.y;
         if (Mathf.Abs(veloY) < valueMidAirVeloY) // MidAir
-            animator.Play("MidAir");
+            animationName = "MidAir";
         else if (veloY > 0)
-            animator.Play("JumpUp");
+            animationName = "JumpUp";
         else if (veloY == 0)
-            animator.Play("Run");
+            animationName = "Run";
         else
-            animator.Play("JumpFall");
+            animationName = "JumpFall";
+
+        animator.Play(animationName); 
     }
 }
