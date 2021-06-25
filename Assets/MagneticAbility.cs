@@ -16,16 +16,24 @@ public class MagneticAbility : MonoBehaviour
     }
 
     [SerializeField] float accelerate = 20f;
+    Dictionary<Transform, float> tmpItems = new Dictionary<Transform, float>();
     private void Update()
     {
         var pos = transform.position;
 
+        tmpItems.Clear();
         foreach (var item in items)
         {
+            tmpItems[item.Key] = item.Value;
+        }
+        foreach (var item in tmpItems)
+        {
             var coinTr = item.Key;
-            float acceleration = item.Value;
+            float acceleration = item.Value + accelerate * Time.deltaTime;
+            items[item.Key] = acceleration;
+
             Vector2 dir = (pos - coinTr.position).normalized;
-            Vector2 move = dir * (acceleration + accelerate) * Time.deltaTime;
+            Vector2 move = dir * (acceleration) * Time.deltaTime;
             coinTr.Translate(move);
         }
     }

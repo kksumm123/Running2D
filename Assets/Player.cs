@@ -34,6 +34,10 @@ public class Player : MonoBehaviour
     {
         if (RunGameManager.IsPlaying() == false)
             return;
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            transform.Find("MagneticAbility").gameObject.SetActive(false);
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            transform.Find("MagneticAbility").gameObject.SetActive(true);
         Move();
         Jump();
         Animation();
