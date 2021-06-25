@@ -53,8 +53,8 @@ public class Player : MonoBehaviour
     float curOffestX;
     private void ResotreXPosition()
     {
-        curOffestX = (camTr.position.x - transform.position.x) * Time.deltaTime;
-        transform.Translate(new Vector3(curOffestX - offsetXcampos, 0, 0));
+        curOffestX = camTr.position.x - transform.position.x;
+        transform.Translate(new Vector3(curOffestX - offsetXcampos, 0, 0) * Time.deltaTime);
     }
 
     void Move()
