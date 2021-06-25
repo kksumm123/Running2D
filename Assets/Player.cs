@@ -76,8 +76,8 @@ public class Player : MonoBehaviour
     bool ChkGround()
     {
         Debug.Assert(groundLayer != 0, "레이어 지정안됨");
-        var hit = Physics2D.Raycast(
-            rayStart.position, Vector2.down, rayCheckDistance, groundLayer);
+        var hit = Physics2D.Raycast( 
+            rayStart.position + new Vector3(0, -1, 0), Vector2.down, rayCheckDistance, groundLayer);
         return hit.transform;
     }
 }
