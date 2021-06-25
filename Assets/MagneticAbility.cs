@@ -12,7 +12,7 @@ public class MagneticAbility : MonoBehaviour
         if (collision.transform.GetComponent<CoinItem>() == null)
             return;
         //items[collision.transform] = 0;
-        items[collision.transform].acc = 0;
+        items[collision.transform] = new RefFloat();
     }
 
     [SerializeField] float accelerate = 20f;

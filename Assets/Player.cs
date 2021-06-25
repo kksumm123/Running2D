@@ -19,6 +19,9 @@ public class Player : MonoBehaviour
     [SerializeField] Vector2 jumpForce = new Vector2(0, 1000f);
     [SerializeField] float gravityScale = 7f;
     [SerializeField] float valueMidAirVeloY = 10f;
+
+    [SerializeField] Transform camTr;
+    [SerializeField] float offsetXcampos;
     void Start()
     {
         speed = RunGameManager.instance.speed;
@@ -27,6 +30,8 @@ public class Player : MonoBehaviour
         rigid.gravityScale = gravityScale;
         rayStart = transform;
         groundLayer = 1 << LayerMask.NameToLayer("Ground");
+        camTr = Camera.main.transform;
+        offsetXcampos = camTr.position.x - transform.position.x;
     }
 
     string animationName;
@@ -41,8 +46,16 @@ public class Player : MonoBehaviour
         Move();
         Jump();
         Animation();
+
+        ResotreXPosition();
     }
 
+    float curOffestX;
+    private void ResotreXPosition()
+    {
+        curOffestX = camTr.position.x - transform.position.x;
+        transform.Translate(new Vector3(curOffestX - offsetXcampos, 0, 0));
+    }
 
     void Move()
     {
