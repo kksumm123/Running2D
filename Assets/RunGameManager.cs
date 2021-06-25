@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,9 +7,17 @@ using UnityEngine;
 public class RunGameManager : MonoBehaviour
 {
     TextMeshProUGUI timeText;
+    TextMeshProUGUI scoreUI;
     public static RunGameManager instance;
     public float speed = 6f;
     [SerializeField] int waitSeconds = 3;
+    [SerializeField] int score;
+    internal void AddCoin(int value)
+    {
+        score += value;
+        scoreUI.text = score.ToString();
+    }
+
     void Awake()
     {
         instance = this;
@@ -16,6 +25,7 @@ public class RunGameManager : MonoBehaviour
     IEnumerator Start()
     {
         timeText = transform.Find("Canvas/TimeText").GetComponent<TextMeshProUGUI>();
+        scoreUI = transform.Find("Canvas/ScoreUI").GetComponent<TextMeshProUGUI>();
         for (int i = waitSeconds; i > 0; i--)
         {
             timeText.text = i.ToString();
@@ -38,4 +48,3 @@ public class RunGameManager : MonoBehaviour
         End,
     }
 }
-;
