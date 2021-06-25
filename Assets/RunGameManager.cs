@@ -15,7 +15,7 @@ public class RunGameManager : MonoBehaviour
     internal void AddCoin(int value)
     {
         score += value;
-        scoreUI.text = "Score : " + score.ToString();
+        scoreUI.text = score.ToString();
     }
 
     void Awake()
