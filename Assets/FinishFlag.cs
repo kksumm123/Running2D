@@ -6,6 +6,7 @@ public class FinishFlag : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        RunGameManager.instance.EndStage();
+        if (collision.CompareTag("Player"))
+            RunGameManager.instance.EndStage();
     }
 }
