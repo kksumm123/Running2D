@@ -4109,30 +4109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db18ee9ce21a634c9f0c3bc0da0df95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1036418710 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6627170474710912058, guid: 519674ae1d195b64d9a0c46c53414bfe, type: 3}
-  m_PrefabInstance: {fileID: 6627170473834689196}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1036418711
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036418710}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ec4acc4572d4af940aeb306a9eaa9c25, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1083464784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4433612297463608, guid: 2b206c0d2afb3604183d9210be1d84ce, type: 3}
@@ -5028,26 +5004,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6627170474710912052, guid: 519674ae1d195b64d9a0c46c53414bfe, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627170474710912059, guid: 519674ae1d195b64d9a0c46c53414bfe, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627170474710912059, guid: 519674ae1d195b64d9a0c46c53414bfe, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627170474710912059, guid: 519674ae1d195b64d9a0c46c53414bfe, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627170474710912059, guid: 519674ae1d195b64d9a0c46c53414bfe, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
     - target: {fileID: 6627170475567153356, guid: 519674ae1d195b64d9a0c46c53414bfe, type: 3}
       propertyPath: m_RootOrder
       value: 8
