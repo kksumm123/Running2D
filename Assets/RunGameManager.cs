@@ -12,10 +12,10 @@ public class RunGameManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        timeText = transform.Find("TimeText").GetComponent<TextMeshProUGUI>();
     }
     IEnumerator Start()
     {
+        timeText = transform.Find("TimeText").GetComponent<TextMeshProUGUI>();
         for (int i = waitSeconds; i > 0; i--)
         {
             timeText.text = i.ToString();
@@ -24,6 +24,10 @@ public class RunGameManager : MonoBehaviour
         timeText.text = "START!";
         yield return new WaitForSeconds(0.5f);
         timeText.text = "";
+    }
+    public static bool IsPlaying()
+    {
+        return instance.gameStateType == GameStateType.Playing;
     }
     public GameStateType gameStateType = GameStateType.Ready;
     public enum GameStateType

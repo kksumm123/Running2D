@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         rigid.gravityScale = gravityScale;
-        animator.Play("Run");
         rayStart = transform;
         groundLayer = 1 << LayerMask.NameToLayer("Ground");
     }
@@ -25,7 +24,7 @@ public class Player : MonoBehaviour
     string animationName;
     void Update()
     {
-        if (RunGameManager.instance.gameStateType != RunGameManager.GameStateType.Playing)
+        if (RunGameManager.IsPlaying() == false)
             return;
         Move();
         Jump();

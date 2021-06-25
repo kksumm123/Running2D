@@ -11,7 +11,7 @@ public class MoveCam : MonoBehaviour
     }
     void Update()
     {
-        if (RunGameManager.instance.gameStateType != RunGameManager.GameStateType.Playing)
+        if (RunGameManager.IsPlaying() == false)
             return;
 
         transform.Translate(speed * Time.deltaTime, 0, 0);
