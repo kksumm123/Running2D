@@ -5,9 +5,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+
     Animator animator;
     Rigidbody2D rigid;
     [SerializeField] float speed;
+
+
     [SerializeField] Vector2 jumpForce = new Vector2(0, 1000f);
     [SerializeField] float gravityScale = 7f;
     [SerializeField] float valueMidAirVeloY = 10f;
@@ -80,5 +88,9 @@ public class Player : MonoBehaviour
         var hit = Physics2D.Raycast(
             rayStart.position + new Vector3(0, -1, 0), Vector2.down, rayCheckDistance, groundLayer);
         return hit.transform;
+    }
+    public void OnEndStage()
+    {
+        animator.Play("Idle");
     }
 }

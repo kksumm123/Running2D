@@ -8,6 +8,14 @@ public class RunGameManager : MonoBehaviour
 {
     TextMeshProUGUI timeText;
     TextMeshProUGUI scoreUI;
+
+    internal void EndStage()
+    {
+        gameStateType = GameStateType.End;
+        Player.instance.OnEndStage();
+        timeText.text = "CLEAR";
+    }
+
     public static RunGameManager instance;
     public float speed = 6f;
     [SerializeField] int waitSeconds = 3;
