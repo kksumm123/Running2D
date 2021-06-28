@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
     Animator animator;
     Rigidbody2D rigid;
-    [SerializeField] float speed;
+    [SerializeField] float speed = 6;
 
 
     [SerializeField] Vector2 jumpForce = new Vector2(0, 1000f);
