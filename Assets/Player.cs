@@ -99,15 +99,20 @@ public class Player : MonoBehaviour
         public float animationTime; //0.6f;
         public float dashSpeed;
         public float dashTime;
+        public GameObject collider;
     }
     [SerializeField] List<Attackinfo> attacks;
     Coroutine attackHandle;
+    Attackinfo curAttack;
     private void Attack()
     {
         if (Input.GetMouseButtonDown(0))
         {
             if (attackHandle != null)
+            {
+                curAttack?.collider.SetActive(false);
                 StopCoroutine(attackHandle);
+            }
 
             attackHandle = StartCoroutine(AttackCo());
         }
@@ -116,13 +121,14 @@ public class Player : MonoBehaviour
     private IEnumerator AttackCo()
     {
         State = StateType.Attack;
-        var curAttack = attacks[curATtackIdx];
+        curAttack = attacks[curATtackIdx];
 
         curATtackIdx++;
         if (curATtackIdx == attacks.Count)
             curATtackIdx = 0;
 
         animator.Play(curAttack.clipName);
+        curAttack.collider.SetActive(true);
         // curAttack.dashTime 동안 curAttack.dashSpeed로 이동
 
         // 플레이 후 현재까지 지난 시간
@@ -136,10 +142,10 @@ public class Player : MonoBehaviour
             
             yield return null;
         }
-        yield return new WaitForSeconds(curAttack.animationTime);
         
         //연속공격 끝나고 실행되는 곳
         State = StateType.IdleOrRunOrJump;
+        curAttack.collider.SetActive(false);
         curATtackIdx = 0;
     }
     #endregion Attack
