@@ -3162,6 +3162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd91a74a6ecd4e45a6bb2a3b40cbd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lerpValue: 1
 --- !u!20 &560237871
 Camera:
   m_ObjectHideFlags: 0
@@ -4368,6 +4369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd91a74a6ecd4e45a6bb2a3b40cbd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lerpValue: 0.01
 --- !u!1 &1962768849
 GameObject:
   m_ObjectHideFlags: 0
@@ -4740,10 +4742,6 @@ PrefabInstance:
     - target: {fileID: 8570616673573911851, guid: 25cde85813bb0fb44a30c6477be5dc60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8570616673573911860, guid: 25cde85813bb0fb44a30c6477be5dc60, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8570616673573911862, guid: 25cde85813bb0fb44a30c6477be5dc60, type: 3}
       propertyPath: m_Name
