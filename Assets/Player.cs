@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
     int jumpCount = 0;
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             if (jumpCount < 1)
             {
@@ -62,15 +62,17 @@ public class Player : MonoBehaviour
     {
         yield return null;
     }
+    Coroutine coHandle;
+    float veloY;
     void Animation()
     {
-        var coHandle = StartCoroutine(CoFn());
+        coHandle = StartCoroutine(CoFn());
         StopCoroutine(coHandle);
         StopAllCoroutines();
         // 애니메이션
         if (ChkGround())
         {
-            animationName = "Run";
+            animationName = "Idle";
             jumpCount = 0;
         }
         else
@@ -78,7 +80,7 @@ public class Player : MonoBehaviour
             // 0보다 작으면 추락
             // -10 ~ 10 = MidAir
             // 0보다 크면 상승
-            float veloY = rigid.velocity.y;
+            veloY = rigid.velocity.y;
             if (Mathf.Abs(veloY) < valueMidAirVeloY) // MidAir
                 animationName = "MidAir";
             else if (veloY > 0)
