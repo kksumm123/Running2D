@@ -69,17 +69,9 @@ public class Player : MonoBehaviour
             }
         }
     }
-    IEnumerator CoFn()
-    {
-        yield return null;
-    }
-    Coroutine coHandle;
     float veloY;
     void Animation()
     {
-        coHandle = StartCoroutine(CoFn());
-        StopCoroutine(coHandle);
-        StopAllCoroutines();
         // 애니메이션
         if (ChkGround())
         {
