@@ -61,10 +61,18 @@ public class Player : MonoBehaviour
     {
         transform.Translate(speed * Time.deltaTime, 0, 0);
     }
+    int jumpCount = 0;
     void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            rigid.AddForce(jumpForce);
+        {
+            if (jumpCount < 1)
+            {
+                rigid.velocity = Vector2.zero;
+                rigid.AddForce(jumpForce);
+                jumpCount++;
+            }
+        }
     }
     IEnumerator CoFn()
     {
@@ -79,6 +87,7 @@ public class Player : MonoBehaviour
         if (ChkGround())
         {
             animationName = "Run";
+            jumpCount = 0;
         }
         else
         {
