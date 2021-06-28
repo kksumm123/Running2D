@@ -29,11 +29,10 @@ public class MagneticAbility : MonoBehaviour
     //    foreach (var item in tmpItems)
     //    {
     //        var coinTr = item.Key;
-    //        float acceleration = item.Value + accelerate * Time.deltaTime;
-    //        items[item.Key] = acceleration;
+    //        items[item.Key] = item.Value + accelerate * Time.deltaTime;
 
     //        Vector2 dir = (pos - coinTr.position).normalized;
-    //        Vector2 move = dir * (acceleration) * Time.deltaTime;
+    //        Vector2 move = dir * items[item.Key] * Time.deltaTime;
     //        coinTr.Translate(move);
     //    }
     //}
@@ -55,7 +54,7 @@ public class MagneticAbility : MonoBehaviour
             items[item.Key].acc = acceleration;
 
             Vector2 dir = (pos - coinTr.position).normalized;
-            Vector2 move = dir * (acceleration) * Time.deltaTime;
+            Vector2 move = dir * acceleration * Time.deltaTime;
             coinTr.Translate(move);
         }
     }
