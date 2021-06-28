@@ -93,10 +93,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09f701c0ca50f046a52e39e4be8ac58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   speed: 6
   jumpForce: {x: 0, y: 1000}
   gravityScale: 7
   valueMidAirVeloY: 10
+  attacks:
+  - clipName: Attack1
+    animationTime: 0.583
+    dashSpeed: 3
+    dashTime: 0.3
+  - clipName: Attack2
+    animationTime: 0.667
+    dashSpeed: 3
+    dashTime: 0.3
+  - clipName: Attack3
+    animationTime: 0.833
+    dashSpeed: 3
+    dashTime: 0.3
+  curATtackIdx: 0
   rayStart: {fileID: 0}
   rayCheckDistance: 0.1
   groundLayer:
