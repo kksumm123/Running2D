@@ -12,6 +12,8 @@ public class CoinItem : MonoBehaviour
             GetComponent<Collider2D>().enabled = false;
             GetComponentInChildren<Animator>().Play("Hide", 1);
             RunGameManager.instance.AddCoin(100);
+            MagneticAbility.instance.RemoveItem(transform);
+            Destroy(gameObject, 1f);
         }
     }
 }
