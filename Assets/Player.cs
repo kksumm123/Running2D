@@ -40,10 +40,21 @@ public class Player : MonoBehaviour
         Animation();
     }
 
-
+    float move;
     void Move()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        // A, D 좌우이동
+        move = 0;
+        if (Input.GetKey(KeyCode.A))
+            move = -1;
+        if (Input.GetKey(KeyCode.D))
+            move = 1;
+
+        if (move != 0)
+        {
+            transform.Translate(move * speed * Time.deltaTime, 0, 0, Space.World);
+            transform.rotation = Quaternion.Euler(0, move == 1 ? 0 : 180, 0);
+        }
     }
     int jumpCount = 0;
     void Jump()
@@ -72,8 +83,11 @@ public class Player : MonoBehaviour
         // 애니메이션
         if (ChkGround())
         {
-            animationName = "Idle";
             jumpCount = 0;
+            if (move == 0)
+                animationName = "Idle";
+            else
+                animationName = "Run";
         }
         else
         {
