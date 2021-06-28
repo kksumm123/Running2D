@@ -56,6 +56,8 @@ public class Player : MonoBehaviour
     float move;
     void Move()
     {
+        if (State == StateType.Attack)
+            return;
         // A, D 좌우이동
         move = 0;
         if (Input.GetKey(KeyCode.A))
@@ -75,6 +77,8 @@ public class Player : MonoBehaviour
     int jumpCount = 0;
     void Jump()
     {
+        if (State == StateType.Attack)
+            return;
         if (Input.GetKeyDown(KeyCode.W))
         {
             if (jumpCount < 1)
@@ -93,13 +97,19 @@ public class Player : MonoBehaviour
     {
         public string clipName;
         public float animationTime; //0.6f;
+        public float dashSpeed;
+        public float dashTime;
     }
     [SerializeField] List<Attackinfo> attacks;
+    Coroutine attackHandle;
     private void Attack()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            StartCoroutine(AttackCo());
+            if (attackHandle != null)
+                StopCoroutine(attackHandle);
+
+            attackHandle = StartCoroutine(AttackCo());
         }
     }
     [SerializeField] int curATtackIdx = 0;
@@ -113,10 +123,28 @@ public class Player : MonoBehaviour
             curATtackIdx = 0;
 
         animator.Play(curAttack.clipName);
+        // curAttack.dashTime 동안 curAttack.dashSpeed로 이동
+
+        // 플레이 후 현재까지 지난 시간
+        float dashEndTime = Time.time + curAttack.dashTime;
+        float WaitEndTime = Time.time + curAttack.animationTime;
+        while (WaitEndTime > Time.time)
+        {
+            if (dashEndTime > Time.time)
+                transform.Translate(
+                    curAttack.dashSpeed * Time.deltaTime, 0, 0, Space.Self);
+            
+            yield return null;
+        }
         yield return new WaitForSeconds(curAttack.animationTime);
+        
+        //연속공격 끝나고 실행되는 곳
         State = StateType.IdleOrRunOrJump;
+        curATtackIdx = 0;
     }
     #endregion Attack
+
+    #region Animation
     float veloY;
     void Animation()
     {
@@ -146,7 +174,9 @@ public class Player : MonoBehaviour
         }
         animator.Play(animationName);
     }
+    #endregion Animation
 
+    #region Methods
     [SerializeField] Transform rayStart;
     [SerializeField] float rayCheckDistance = 0.1f;
     [SerializeField] LayerMask groundLayer;
@@ -157,10 +187,7 @@ public class Player : MonoBehaviour
             rayStart.position + new Vector3(0, -1, 0), Vector2.down, rayCheckDistance, groundLayer);
         return hit.transform;
     }
-    public void OnEndStage()
-    {
-        animator.Play("Idle");
-    }
+    #endregion Methods
 }
 namespace Run
 {
