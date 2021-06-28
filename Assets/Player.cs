@@ -9,6 +9,17 @@ public class Player : MonoBehaviour
     {
         instance = this;
     }
+    [SerializeField] StateType state;
+    StateType State
+    {
+        get { return state; }
+        set { state = value; }
+    }
+    public enum StateType
+    {
+        IdleOrRunOrJump,
+        Attack,
+    }
 
     Animator animator;
     Rigidbody2D rigid;
@@ -37,8 +48,10 @@ public class Player : MonoBehaviour
             transform.Find("MagneticAbility").gameObject.SetActive(true);
         Move();
         Jump();
+        Attack();
         Animation();
     }
+
 
     float move;
     void Move()
@@ -69,9 +82,29 @@ public class Player : MonoBehaviour
             }
         }
     }
+    [SerializeField] string attackClipName = "Attack1";
+    [SerializeField] float animationTime = 0.6f;
+    private void Attack()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(AttackCo());
+        }
+    }
+
+    private IEnumerator AttackCo()
+    {
+        State = StateType.Attack;
+        animator.Play(attackClipName);
+        yield return new WaitForSeconds(animationTime);
+        State = StateType.IdleOrRunOrJump;
+    }
+
     float veloY;
     void Animation()
     {
+        if (State == StateType.Attack)
+            return;
         // 애니메이션
         if (ChkGround())
         {
