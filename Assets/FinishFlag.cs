@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinishFlag : MonoBehaviour
+namespace Run
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class FinishFlag : MonoBehaviour
     {
-        if (collision.CompareTag("Player"))
-            RunGameManager.instance.EndStage();
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Player"))
+                RunGameManager.instance.EndStage();
+        }
     }
 }

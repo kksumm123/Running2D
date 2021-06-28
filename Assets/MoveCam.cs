@@ -1,19 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class MoveCam : MonoBehaviour
+namespace Run
 {
-    [SerializeField] float speed;
-    private void Start()
+    public class MoveCam : MonoBehaviour
     {
-        speed = RunGameManager.instance.speed;
-    }
-    void Update()
-    {
-        if (RunGameManager.IsPlaying() == false)
-            return;
+        [SerializeField] float speed;
+        private void Start()
+        {
+            speed = RunGameManager.instance.speed;
+        }
+        void Update()
+        {
+            if (RunGameManager.IsPlaying() == false)
+                return;
 
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+            transform.Translate(speed * Time.deltaTime, 0, 0);
+        }
     }
 }

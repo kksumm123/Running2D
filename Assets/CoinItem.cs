@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class CoinItem : MonoBehaviour
+namespace Run
 {
-    bool ishit = false;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class CoinItem : MonoBehaviour
     {
-        if (collision.CompareTag("Player"))
+        bool ishit = false;
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            GetComponent<Collider2D>().enabled = false;
-            GetComponentInChildren<Animator>().Play("Hide", 1);
-            RunGameManager.instance.AddCoin(100);
-            MagneticAbility.instance.RemoveItem(transform);
-            Destroy(gameObject, 1f);
+            if (collision.CompareTag("Player"))
+            {
+                GetComponent<Collider2D>().enabled = false;
+                GetComponentInChildren<Animator>().Play("Hide", 1);
+                RunGameManager.instance.AddCoin(100);
+                MagneticAbility.instance.RemoveItem(transform);
+                Destroy(gameObject, 1f);
+            }
         }
     }
 }
