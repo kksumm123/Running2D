@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         Animation();
     }
 
-
+    #region Move
     float move;
     void Move()
     {
@@ -69,6 +69,9 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, move == 1 ? 0 : 180, 0);
         }
     }
+    #endregion Move
+
+    #region Jump
     int jumpCount = 0;
     void Jump()
     {
@@ -82,8 +85,16 @@ public class Player : MonoBehaviour
             }
         }
     }
-    [SerializeField] string attackClipName = "Attack1";
-    [SerializeField] float animationTime = 0.6f;
+    #endregion Jump
+
+    #region Attack
+    [Serializable]
+    class Attackinfo
+    {
+        public string clipName;
+        public float animationTime; //0.6f;
+    }
+    [SerializeField] List<Attackinfo> attacks;
     private void Attack()
     {
         if(Input.GetMouseButtonDown(0))
@@ -91,15 +102,21 @@ public class Player : MonoBehaviour
             StartCoroutine(AttackCo());
         }
     }
-
+    [SerializeField] int curATtackIdx = 0;
     private IEnumerator AttackCo()
     {
         State = StateType.Attack;
-        animator.Play(attackClipName);
-        yield return new WaitForSeconds(animationTime);
+        var curAttack = attacks[curATtackIdx];
+
+        curATtackIdx++;
+        if (curATtackIdx == attacks.Count)
+            curATtackIdx = 0;
+
+        animator.Play(curAttack.clipName);
+        yield return new WaitForSeconds(curAttack.animationTime);
         State = StateType.IdleOrRunOrJump;
     }
-
+    #endregion Attack
     float veloY;
     void Animation()
     {
