@@ -203,7 +203,15 @@ public class Player : MonoBehaviour
         if (monster == null)
             return;
         this.hp -= monster.damage;
+        StartCoroutine(Hit());
+    }
+    [SerializeField] float hitDelay = 0.3f;
+    private IEnumerator Hit()
+    {
+        State = StateType.Attacked;
         animator.Play("Hit");
+        yield return new WaitForSeconds(hitDelay);
+        State = StateType.IdleOrRunOrJump;
     }
     #endregion OnEvents
 }
