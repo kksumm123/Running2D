@@ -10,6 +10,7 @@ public class AirMonster : BaseMonster
     AIPath aiPath;
     IEnumerator Start()
     {
+        animator = GetComponentInChildren<Animator>();
         aiPath = GetComponent<AIPath>();
         while (true)
         {

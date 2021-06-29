@@ -209,10 +209,9 @@ public class Player : MonoBehaviour
     [SerializeField] bool stomping = false;
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Monster monster = collision.gameObject.GetComponent<Monster>();
+        BaseMonster monster = collision.gameObject.GetComponent<BaseMonster>();
         if (monster == null || monster.IsDie() == true)
             return;
-
         stomping = false;
         if (collision.contacts[0].normal.y > 0.9f)
             stomping = true;
