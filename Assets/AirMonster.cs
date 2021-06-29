@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AirMonster : MonoBehaviour
+public class AirMonster : BaseMonster
 {
     // 왼쪽, 오른쪽 진행방향에 따라 Rotation 하도록
 

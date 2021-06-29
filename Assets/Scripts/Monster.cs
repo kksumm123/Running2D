@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour, IDamageable
+public class BaseMonster : MonoBehaviour
 {
-    Animator animator;
-    [SerializeField] float speed = 2;
+    protected Animator animator;
+    [SerializeField] protected float speed = 2;
 
     [SerializeField] StateType state;
-    StateType State
+    protected StateType State
     {
         get { return state; }
         set
@@ -42,37 +42,6 @@ public class Monster : MonoBehaviour, IDamageable
         Hit,
         Die,
     }
-    Coroutine patrolHandle;
-    private void Start()
-    {
-        animator = GetComponentInChildren<Animator>();
-        patrolHandle = StartCoroutine(PatrolCo());
-    }
-
-    bool isPatrol = true;
-    [SerializeField] float range = 1;
-    float minWorldX;
-    float maxWorldX;
-    private IEnumerator PatrolCo()
-    {
-        minWorldX = transform.position.x - range;
-        maxWorldX = transform.position.x + range;
-        while (isPatrol)
-        {
-            if (State == StateType.Hit)
-                yield return null;
-            else
-                State = StateType.Patrol;
-
-            var pos = transform.position;
-
-            if (minWorldX > pos.x || maxWorldX < pos.x)
-                transform.Rotate(0, 180, 0);
-            if (State == StateType.Patrol)
-                transform.Translate(speed * Time.deltaTime, 0, 0);
-            yield return null;
-        }
-    }
 
     [SerializeField] int hp = 10;
     public void OnDamage(int damage)
@@ -100,7 +69,8 @@ public class Monster : MonoBehaviour, IDamageable
     {
         yield return new WaitForSeconds(hitDelay);
         State = StateType.Die;
-        StopCoroutine(patrolHandle);
+        var rigid = GetComponent<Rigidbody2D>();
+        rigid.gravityScale = 0;
         yield return new WaitForSeconds(destroyDelay);
         Destroy(gameObject);
     }
@@ -109,4 +79,44 @@ public class Monster : MonoBehaviour, IDamageable
     {
         return hp <= 0;
     }
+}
+public class Monster : BaseMonster
+{
+
+    Coroutine patrolHandle;
+    private void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+        patrolHandle = StartCoroutine(PatrolCo());
+    }
+
+    bool isPatrol = true;
+    [SerializeField] float range = 1;
+    float minWorldX;
+    float maxWorldX;
+    private IEnumerator PatrolCo()
+    {
+        minWorldX = transform.position.x - range;
+        maxWorldX = transform.position.x + range;
+        while (isPatrol)
+        {
+            if (State == StateType.Hit)
+                yield return null;
+            else
+                State = StateType.Patrol;
+
+            if (IsDie())
+                yield break;
+
+            var pos = transform.position;
+
+            if (minWorldX > pos.x || maxWorldX < pos.x)
+                transform.Rotate(0, 180, 0);
+            if (State == StateType.Patrol)
+                transform.Translate(speed * Time.deltaTime, 0, 0);
+            yield return null;
+        }
+    }
+
+    
 }

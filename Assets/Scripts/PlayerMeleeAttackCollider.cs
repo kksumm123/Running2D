@@ -7,11 +7,7 @@ public class PlayerMeleeAttackCollider : MonoBehaviour
     [SerializeField] int damage = 1;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponent<IDamageable>()?.OnDamage(damage);
+        collision.GetComponent<BaseMonster>()?.OnDamage(damage);
 
     }
-}
-interface IDamageable
-{
-    public void OnDamage(int damage);
 }
