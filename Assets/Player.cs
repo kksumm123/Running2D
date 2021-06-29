@@ -154,7 +154,7 @@ public class Player : MonoBehaviour
     float veloY;
     void Animation()
     {
-        if (State == StateType.Attack)
+        if (State != StateType.IdleOrRunOrJump)
             return;
         // 애니메이션
         if (ChkGround())
