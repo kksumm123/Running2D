@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
 
     Animator animator;
     Rigidbody2D rigid;
+    [SerializeField] int hp = 5;
     [SerializeField] float speed = 6;
 
 
@@ -86,11 +87,16 @@ public class Player : MonoBehaviour
         {
             if (jumpCount < 1)
             {
-                rigid.velocity = Vector2.zero;
-                rigid.AddForce(jumpForce);
-                jumpCount++;
+                StartJump();
             }
         }
+    }
+
+    private void StartJump()
+    {
+        rigid.velocity = Vector2.zero;
+        rigid.AddForce(jumpForce);
+        jumpCount++;
     }
     #endregion Jump
 
@@ -199,18 +205,29 @@ public class Player : MonoBehaviour
     #endregion Methods
 
     #region OnEvents
-    [SerializeField] int hp = 5;
+    [SerializeField] bool stomping = false;
     void OnCollisionEnter2D(Collision2D collision)
     {
         Monster monster = collision.gameObject.GetComponent<Monster>();
-        if (monster == null)
+        if (monster == null || monster.IsDie() == true)
             return;
-        this.hp -= monster.damage;
         StartCoroutine(Hit());
+        
+        if (collision.contacts[0].normal.y > 0.9f)
+            stomping = true;
 
-        if (hp <= 0)
+        if (stomping == true)
         {
-            StartCoroutine(DieCo());
+            monster.OnDamage(1);
+
+            StartJump();
+        }
+        else
+        {
+            this.hp -= monster.damage;
+
+            if (hp <= 0)
+                StartCoroutine(DieCo());
         }
     }
 

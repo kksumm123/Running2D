@@ -104,4 +104,9 @@ public class Monster : MonoBehaviour
         yield return new WaitForSeconds(destroyDelay);
         Destroy(gameObject);
     }
+
+    internal bool IsDie()
+    {
+        return hp <= 0;
+    }
 }
