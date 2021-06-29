@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 public class Player : MonoBehaviour
 {
     public static Player instance;
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
         IdleOrRunOrJump,
         Attack,
         Attacked, //피격
+        Die,
     }
 
     Animator animator;
@@ -204,14 +207,27 @@ public class Player : MonoBehaviour
             return;
         this.hp -= monster.damage;
         StartCoroutine(Hit());
+
+        if (hp <= 0)
+        {
+            StartCoroutine(DieCo());
+        }
     }
+
+
     [SerializeField] float hitDelay = 0.3f;
     private IEnumerator Hit()
     {
         State = StateType.Attacked;
-        animator.Play("Hit");
+        animator.Play("Hit" + Random.Range(1, 3).ToString());
         yield return new WaitForSeconds(hitDelay);
         State = StateType.IdleOrRunOrJump;
+    }
+    private IEnumerator DieCo()
+    {
+        yield return new WaitForSeconds(hitDelay);
+        State = StateType.Die;
+        animator.Play("Die");
     }
     #endregion OnEvents
 }
