@@ -6,7 +6,7 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     Animator animator;
-
+    [SerializeField] float speed = 2;
     [SerializeField] float range = 1;
     float minWorldX;
     float maxWorldX;
@@ -25,9 +25,11 @@ public class Monster : MonoBehaviour
         while (isPatrol)
         {
             var pos = transform.position;
+
             if (minWorldX > pos.x || maxWorldX < pos.x)
                 transform.Rotate(0, 180, 0);
-            transform.Translate(Time.deltaTime, 0, 0);
+
+            transform.Translate(speed * Time.deltaTime, 0, 0);
             yield return null;
         }
     }
