@@ -22,6 +22,7 @@ public class Monster : MonoBehaviour
     {
         minWorldX = transform.position.x - range;
         maxWorldX = transform.position.x + range;
+        animator.Play("Run");
         while (isPatrol)
         {
             var pos = transform.position;
