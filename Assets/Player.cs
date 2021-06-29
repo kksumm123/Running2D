@@ -97,6 +97,7 @@ public class Player : MonoBehaviour
         rigid.velocity = Vector2.zero;
         rigid.AddForce(jumpForce);
         jumpCount++;
+        State = StateType.IdleOrRunOrJump;
     }
     #endregion Jump
 
@@ -211,8 +212,8 @@ public class Player : MonoBehaviour
         Monster monster = collision.gameObject.GetComponent<Monster>();
         if (monster == null || monster.IsDie() == true)
             return;
-        StartCoroutine(Hit());
-        
+
+        stomping = false;
         if (collision.contacts[0].normal.y > 0.9f)
             stomping = true;
 
@@ -225,6 +226,7 @@ public class Player : MonoBehaviour
         else
         {
             this.hp -= monster.damage;
+            StartCoroutine(Hit());
 
             if (hp <= 0)
                 StartCoroutine(DieCo());
