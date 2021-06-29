@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd6bc98083e6a94fba8a219a9264fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 1
   hp: 10
   dieDelay: 0.3
   destroyDelay: 0.7

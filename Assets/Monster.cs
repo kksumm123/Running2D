@@ -7,10 +7,31 @@ public class Monster : MonoBehaviour
 {
     Animator animator;
 
+    [SerializeField] float range = 1;
+    float minWorldX;
+    float maxWorldX;
+
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        StartCoroutine(PatrolCo());
     }
+
+    bool isPatrol = true;
+    private IEnumerator PatrolCo()
+    {
+        minWorldX = transform.position.x - range;
+        maxWorldX = transform.position.x + range;
+        while (isPatrol)
+        {
+            var pos = transform.position;
+            if (minWorldX > pos.x || maxWorldX < pos.x)
+                transform.Rotate(0, 180, 0);
+            transform.Translate(Time.deltaTime, 0, 0);
+            yield return null;
+        }
+    }
+
     [SerializeField] int hp = 10;
     internal void OnDamage(int damage)
     {
