@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     {
         IdleOrRunOrJump,
         Attack,
+        Attacked, //피격
     }
 
     Animator animator;
@@ -46,8 +47,11 @@ public class Player : MonoBehaviour
             transform.Find("MagneticAbility").gameObject.SetActive(false);
         if (Input.GetKeyDown(KeyCode.Alpha2))
             transform.Find("MagneticAbility").gameObject.SetActive(true);
-        Move();
-        Jump();
+        if (State == StateType.IdleOrRunOrJump)
+        {
+            Move();
+            Jump();
+        }
         Attack();
         Animation();
     }
@@ -56,8 +60,6 @@ public class Player : MonoBehaviour
     float move;
     void Move()
     {
-        if (State == StateType.Attack)
-            return;
         // A, D 좌우이동
         move = 0;
         if (Input.GetKey(KeyCode.A))
@@ -77,8 +79,6 @@ public class Player : MonoBehaviour
     int jumpCount = 0;
     void Jump()
     {
-        if (State == StateType.Attack)
-            return;
         if (Input.GetKeyDown(KeyCode.W))
         {
             if (jumpCount < 1)
