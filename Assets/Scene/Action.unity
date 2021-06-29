@@ -3217,7 +3217,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -3236,7 +3236,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -3244,7 +3244,7 @@ MonoBehaviour:
     seed: 0
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
-  showGraphs: 1
+  showGraphs: 0
 --- !u!4 &176507443
 Transform:
   m_ObjectHideFlags: 0
@@ -5052,6 +5052,14 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8579226209613091673, guid: 35e734333ae6e0d4a8b7a648ec3b629d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579226209613091673, guid: 35e734333ae6e0d4a8b7a648ec3b629d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579226209613091673, guid: 35e734333ae6e0d4a8b7a648ec3b629d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.458
       objectReference: {fileID: 0}
@@ -5116,6 +5124,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 414036998}
+--- !u!114 &2428631628215123742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2428631628215123740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a415d7e8dbf99c44b820e14f3041d661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2942843372532421614
 PrefabInstance:
   m_ObjectHideFlags: 0
