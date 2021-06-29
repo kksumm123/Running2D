@@ -14,8 +14,6 @@ public class Monster : MonoBehaviour
         get { return state; }
         set
         {
-            if (state == value)
-                return;
             state = value;
             switch (state)
             {
@@ -25,7 +23,7 @@ public class Monster : MonoBehaviour
                 case StateType.Attack:
                     break;
                 case StateType.Patrol:
-                    animator.Play("Run");
+                    animator.Play("Run", 0);
                     break;
                 case StateType.Hit:
                     animator.Play("Hit");
@@ -59,9 +57,13 @@ public class Monster : MonoBehaviour
     {
         minWorldX = transform.position.x - range;
         maxWorldX = transform.position.x + range;
-        State = StateType.Patrol;
         while (isPatrol)
         {
+            if (State == StateType.Hit)
+                yield return null;
+            else
+                State = StateType.Patrol;
+
             var pos = transform.position;
 
             if (minWorldX > pos.x || maxWorldX < pos.x)
@@ -76,7 +78,7 @@ public class Monster : MonoBehaviour
     internal void OnDamage(int damage)
     {
         hp -= damage;
-        State = StateType.Hit;
+        StartCoroutine(HitCo());
 
         if (hp <= 0)
         {
@@ -84,13 +86,19 @@ public class Monster : MonoBehaviour
         }
     }
 
-    [SerializeField] float dieDelay = 0.3f;
+    [SerializeField] float hitDelay = 0.3f;
+    private IEnumerator HitCo()
+    {
+        State = StateType.Hit;
+        yield return new WaitForSeconds(hitDelay);
+        State = StateType.Idle;
+    }
     [SerializeField] float destroyDelay = 0.7f;
     internal int damage = 1;
 
     private IEnumerator DieCo()
     {
-        yield return new WaitForSeconds(dieDelay);
+        yield return new WaitForSeconds(hitDelay);
         State = StateType.Die;
         StopCoroutine(patrolHandle);
         yield return new WaitForSeconds(destroyDelay);
