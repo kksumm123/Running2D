@@ -21,5 +21,5 @@ public class AirMonster : MonoBehaviour
             yield return null;
         }
     }
-
 }
+

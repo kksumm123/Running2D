@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class Monster : MonoBehaviour, IDamageable
 {
     Animator animator;
     [SerializeField] float speed = 2;
@@ -75,7 +75,7 @@ public class Monster : MonoBehaviour
     }
 
     [SerializeField] int hp = 10;
-    internal void OnDamage(int damage)
+    public void OnDamage(int damage)
     {
         hp -= damage;
         StartCoroutine(HitCo());
