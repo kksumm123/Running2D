@@ -139,10 +139,10 @@ public class Player : MonoBehaviour
             if (dashEndTime > Time.time)
                 transform.Translate(
                     curAttack.dashSpeed * Time.deltaTime, 0, 0, Space.Self);
-            
+
             yield return null;
         }
-        
+
         //연속공격 끝나고 실행되는 곳
         State = StateType.IdleOrRunOrJump;
         curAttack.collider.SetActive(false);
@@ -194,6 +194,18 @@ public class Player : MonoBehaviour
         return hit.transform;
     }
     #endregion Methods
+
+    #region OnEvents
+    [SerializeField] int hp = 5;
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Monster monster = collision.gameObject.GetComponent<Monster>();
+        if (monster == null)
+            return;
+        this.hp -= monster.damage;
+        animator.Play("Hit");
+    }
+    #endregion OnEvents
 }
 namespace Run
 {

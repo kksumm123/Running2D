@@ -25,6 +25,7 @@ public class Monster : MonoBehaviour
 
     [SerializeField] float dieDelay = 0.3f;
     [SerializeField] float destroyDelay = 0.7f;
+    internal int damage = 1;
 
     private IEnumerator DieCo()
     {
